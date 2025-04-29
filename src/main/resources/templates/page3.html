@@ -14,8 +14,8 @@
 </div>
 
 <form action="/submit" method="post" th:object="${user}">
-    City: <input type="text" th:field="*{city}" /><br/>
-    Country: <input type="text" th:field="*{country}" /><br/>
+    City: <input type="text" th:field="*{city}" required/><br/>
+    Country: <input type="text" th:field="*{country}" required/><br/>
 
     <button type="submit">Submit</button>
 </form>
