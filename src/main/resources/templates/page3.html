@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <p>First Name: <strong th:text="${user.firstName}"></strong></p>
+    <p>Last Name: <strong th:text="${user.lastName}"></strong></p>
+    <p>Email: <strong th:text="${user.email}"></strong></p>
+    <p>Phone: <strong th:text="${user.phone}"></strong></p>
+</div>
+
+<form action="/submit" method="post" th:object="${user}">
+    City: <input type="text" th:field="*{city}" /><br/>
+    Country: <input type="text" th:field="*{country}" /><br/>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

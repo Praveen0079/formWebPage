@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p>First Name: <strong th:text="${user.firstName}"></strong></p>
+    <p>Last Name: <strong th:text="${user.lastName}"></strong></p>
+</div>
+
+<form action="/page3" method="post" th:object="${user}">
+    Email: <input type="email" th:field="*{email}" /><br/>
+    Phone: <input type="text" th:field="*{phone}" /><br/>
+
+    <button type="submit">Next</button>
+</form>
+</body>
+</html>
